@@ -1,0 +1,24 @@
+{
+  "name": "albin-portfolio",
+  "version": "1.0.0",
+  "description": "A software developer portfolio",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm test"
+  },
+  "keywords": [
+    "AlbinPM",
+    "albin",
+    "albin",
+    "p",
+    "m",
+    "portfolio",
+    "albin",
+    "p",
+    "m",
+    "portfolio",
+    "albin-p-m-portfolio"
+  ],
+  "author": "Albin P M",
+  "license": "ISC"
+}
