@@ -1,45 +1,92 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    height: clamp(100%, 100vh, 100%);
-    background-color: black;
-    color: white;
+  height: clamp(100%, 100vh, 100%);
+  background-color: black;
+  color: white;
 }
 
 .nav-bar {
-    position: sticky;
-    top: 0;
-    left: 0;
-    padding: 10px;
-    font-size: large;
+  position: sticky;
+  top: 0;
+  left: 0;
+  padding: 10px;
+  font-size: large;
 }
 
 .nav-bar > ul {
-    display: flex;
-    flex-direction: row;
-    list-style-type: none;
-    justify-content: right;
+  display: flex;
+  flex-direction: row;
+  list-style-type: none;
+  justify-content: right;
 }
 
 .nav-bar > ul > li {
-    list-style-type: none;
-    margin: 6px;
+  list-style-type: none;
+  margin: 6px;
 }
 
 .nav-bar > ul > li > a {
-    text-decoration: none;
-    color: white;
+  text-decoration: none;
+  color: white;
 }
 
 .nav-bar > ul > li > a:hover {
-    color: #1CCB00;
-    text-decoration: underline;
+  color: #1ccb00;
+  text-decoration: underline;
 }
 
-.nav-bar > ul > li > a:current{
-    text-decoration: underline;
+.nav-bar > ul > li > a:current {
+  text-decoration: underline;
+}
+
+.para {
+  display: flex;
+}
+
+.highlight {
+  color: #1ccb00;
+  font-size: larger;
+}
+
+.typing {
+  overflow: hidden;
+  font: monospace;
+  animation: typing 3.5s steps(10, end) infinite;
+}
+
+.blink {
+  color: orange;
+  font-size: larger;
+  font-weight: bolder;
+  animation: blink-animation 0.75s step-end infinite;
+}
+
+@keyframes type {
+  to {
+    left: 100%;
+  }
+}
+
+@keyframes blink-animation {
+  from,
+  to {
+    visibility: hidden;
+  }
+  50% {
+    visibility: visible;
+  }
+}
+
+@keyframes typing {
+  from {
+    width: 0px;
+  }
+  to {
+    width: 100%;
+  }
 }
