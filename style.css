@@ -4,8 +4,14 @@
   box-sizing: border-box;
 }
 
+::selection {
+    color: #1ccb00;
+    background-color: rgb(43, 43, 43);
+}
+
 body {
-  height: clamp(100%, 100vh, 100%);
+  font-size: 50px;
+  min-height: 100vh;
   background-color: black;
   color: white;
 }
@@ -15,7 +21,10 @@ body {
   top: 0;
   left: 0;
   padding: 10px;
-  font-size: large;
+  font-size: 20px;
+  opacity: 1;
+  background-color: black;
+  border-bottom: 1px solid rgb(19, 19, 19);
 }
 
 .nav-bar > ul {
@@ -40,12 +49,9 @@ body {
   text-decoration: underline;
 }
 
-.nav-bar > ul > li > a:current {
-  text-decoration: underline;
-}
-
-.para {
-  display: flex;
+.nav-bar > ul > li > a::selection {
+    color: white;
+    background-color: blue;
 }
 
 .highlight {
@@ -53,10 +59,17 @@ body {
   font-size: larger;
 }
 
-.typing {
-  overflow: hidden;
-  font: monospace;
-  animation: typing 3.5s steps(10, end) infinite;
+.highlight::selection {
+    color: orange;
+}
+
+#home {
+  margin: 10px;
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  align-items: center;
+  justify-items: center;
 }
 
 .blink {
@@ -66,10 +79,8 @@ body {
   animation: blink-animation 0.75s step-end infinite;
 }
 
-@keyframes type {
-  to {
-    left: 100%;
-  }
+.blink::selection {
+    color: white;
 }
 
 @keyframes blink-animation {
@@ -79,14 +90,5 @@ body {
   }
   50% {
     visibility: visible;
-  }
-}
-
-@keyframes typing {
-  from {
-    width: 0px;
-  }
-  to {
-    width: 100%;
   }
 }
