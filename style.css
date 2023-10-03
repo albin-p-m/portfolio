@@ -5,8 +5,8 @@
 }
 
 ::selection {
-    color: #1ccb00;
-    background-color: rgb(43, 43, 43);
+  color: #1ccb00;
+  background-color: rgb(43, 43, 43);
 }
 
 body {
@@ -50,8 +50,8 @@ body {
 }
 
 .nav-bar > ul > li > a::selection {
-    color: white;
-    background-color: blue;
+  color: white;
+  background-color: blue;
 }
 
 .highlight {
@@ -60,7 +60,7 @@ body {
 }
 
 .highlight::selection {
-    color: orange;
+  color: orange;
 }
 
 #home {
@@ -80,7 +80,7 @@ body {
 }
 
 .blink::selection {
-    color: white;
+  color: white;
 }
 
 @keyframes blink-animation {
